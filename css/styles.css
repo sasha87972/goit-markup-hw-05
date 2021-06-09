@@ -551,7 +551,11 @@ a.transp {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   background-color: var(--white-text);
-  fill: var(--black-logo);
+  color: var(--black-logo);
   cursor: pointer;
+}
+.modal-close-icon {
+  fill: currentColor;
 }
