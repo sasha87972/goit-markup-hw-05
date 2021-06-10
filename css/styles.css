@@ -462,7 +462,16 @@ a.transp {
   flex-basis: calc(100% / 3 - var(--project-gap));
   margin-left: var(--project-gap);
   margin-top: var(--project-gap);
+}
+.card {
+  display: inline-block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover,
+.card:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-overlay {
   position: relative;
@@ -485,14 +494,9 @@ a.transp {
   color: var(--white-text);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-item:hover .project-overlay,
-.project-item:focus .project-overlay {
+.card:hover .project-overlay,
+.card:focus .project-overlay {
   transform: translateY(-100%);
-}
-.project-item:hover,
-.project-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-desc {
   padding: 20px 24px;
@@ -532,7 +536,7 @@ a.transp {
 }
 
 .backdrop.is-hidden .modal {
- transform: scale(0.9);
+  
 }
 .modal {
   position: absolute;
@@ -540,7 +544,7 @@ a.transp {
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%), scale(1);
+  transform: translate(-50%, -50%) scale(1);
   background-color: var(--white-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
