@@ -291,7 +291,7 @@ img {
   display: flex;
   justify-content: center;
 }
-.social-list:not(:last-child) {
+.social-list > li:not(:last-child) {
   margin-right: 10px;
 }
 .team-social {
@@ -397,7 +397,6 @@ a.transp {
 .footer-social-list {
   display: flex;
   justify-content: space-between;
-  width: 206px;
   margin-top: 20px;
 }
 .footer-social {
@@ -410,6 +409,9 @@ a.transp {
   background-color: var(--white-text-transp);
   color: var(--white-text);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-list > li:not(:last-child) {
+  margin-right: 10px;
 }
 .footer-social-icon {
   fill: currentColor;
